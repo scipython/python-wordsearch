@@ -205,7 +205,7 @@ class WordSearch:
             width, height
         )
 
-    def grid_as_svg(self, width, height):
+    def grid_as_svg(self, grid, width, height):
         """Return the wordsearch grid as a sequence of SVG <text> elements."""
 
         # A bit of padding at the top.
@@ -225,7 +225,7 @@ class WordSearch:
         for irow in range(self.nrows):
             x = XPAD + letter_width / 2
             for icol in range(self.ncols):
-                letter = self.grid[irow][icol]
+                letter = grid[irow][icol]
                 if letter != " ":
                     s.append(
                         '<text x="{}" y="{}" text-anchor="middle">{}</text>'.format(
@@ -267,7 +267,7 @@ class WordSearch:
         """Return the wordsearch grid as SVG."""
 
         svg = self._svg_preamble(width, height)
-        y0, svg_grid = self.grid_as_svg(width, height)
+        y0, svg_grid = self.grid_as_svg(grid, width, height)
         svg += svg_grid
         # If there's room print the word list.
         if y0 + 25 * len(self.wordlist) // 2 < height:
@@ -284,7 +284,7 @@ class WordSearch:
         with open(svg_filename, "w") as fo:
             print(self.make_wordsearch_svg(self.grid, width, height), file=fo)
         svg_solution_filename = self.output_filestem + "-solution.svg"
-        with open(svg_filename, "w") as fo:
+        with open(svg_solution_filename, "w") as fo:
             print(self.make_wordsearch_svg(self.solution, width, height), file=fo)
 
     def _get_wordlist(self, wordlist_filename):
