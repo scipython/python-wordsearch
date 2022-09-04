@@ -5,16 +5,18 @@ class Mask:
     def apply(self, grid):
         """The default, no mask."""
         pass
-        
+
+
 class CircleMask(Mask):
     def apply(self, grid):
         """A circular mask to shape the grid."""
-        r2 = min(self.ncols, self.nrows)**2 // 4
-        cx, cy = self.ncols//2, self.nrows // 2
+        r2 = min(self.ncols, self.nrows) ** 2 // 4
+        cx, cy = self.ncols // 2, self.nrows // 2
         for irow in range(self.nrows):
             for icol in range(self.ncols):
-                if (irow - cy)**2 + (icol - cx)**2 > r2:
-                    grid[irow][icol] = '*'
+                if (irow - cy) ** 2 + (icol - cx) ** 2 > r2:
+                    grid[irow][icol] = "*"
+
 
 class SquaresMask(Mask):
     def apply(self, grid):
@@ -24,10 +26,9 @@ class SquaresMask(Mask):
         cx = self.ncols // 2
         for irow in range(self.nrows):
             for icol in range(self.ncols):
-                if a <= icol < self.ncols-a:
-                    if irow < cy-a or irow > cy+a:
-                        grid[irow][icol] = '*'
-                if a <= irow < self.nrows-a:
-                    if icol < cx-a or icol > cx+a:
-                        grid[irow][icol] = '*'
-
+                if a <= icol < self.ncols - a:
+                    if irow < cy - a or irow > cy + a:
+                        grid[irow][icol] = "*"
+                if a <= irow < self.nrows - a:
+                    if icol < cx - a or icol > cx + a:
+                        grid[irow][icol] = "*"

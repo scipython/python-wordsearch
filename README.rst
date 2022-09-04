@@ -88,4 +88,6 @@ Output to an SVG file is also possible:
 
 which produces the image:
 
-![](./doc/source/_static/dog-search.svg)
+.. image:: https://raw.githubusercontent.com/scipython/python-wordsearch/master/doc/source/_static/dog-search.svg
+  :width: 600
+  :alt: Example wordsearch of dog breeds

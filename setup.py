@@ -35,8 +35,7 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     python_requires=">=3.6",
-    install_requires=[
-    ],
+    install_requires=[],
     extras_require={"dev": ["black", "pytest-cov", "tox", "ipython", "sphinx"]},
     # no need for MANIFEST.in, which should be reserved only for build-time files
     project_urls={
