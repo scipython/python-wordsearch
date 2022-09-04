@@ -36,5 +36,56 @@ Creating a Word Search Puzzle
 
     >>> from wordsearch import WordSearch
 
-    >>> wordsearch
--
+    >>> wordsearch = WordSearch(
+   ...:     15,
+   ...:     15,
+   ...:     [
+   ...:         "BOXER",
+   ...:         "DASCHUND",
+   ...:         "AIREDALE",
+   ...:         "BORZOI",
+   ...:         "LABRADOR",
+   ...:         "CHIHUAHUA",
+   ...:         "GREYHOUND",
+   ...:         "POMERANIAN",
+   ...:     ],
+   ...:     mask="circle",
+   ...:     output_filestem="dog-search",
+   ...:     allow_backwards_words=True,
+   ...: )
+   
+   >>> wordsearch.make()
+  (True, 'Fitted the words in 1 attempt(s)')
+  
+   >>> print(wordsearch.wordsearch_text)
+              C K I Z H          
+          L L H E S Z R I L      
+        R E F I L H W Y D Y R    
+      S W C X H A J M W G R P G  
+      P Q M R U D P Y M M O I R  
+    F D D E P A E A B J M D D E W
+    A I X C O H R I L E O P A Y Y
+    P O D G B U I N R L D D S H B
+    B Y V A A A A A C A U A C O U
+    I O Z R O B N K A B B Q H U E
+      Z V H C I Q U P R D D U N  
+      O M A A K U Q G A D Y N D  
+        I N L C E F W D T I D    
+          L L X X G W O A I      
+              M J Z C R          
+    POMERANIAN
+    CHIHUAHUA
+    GREYHOUND
+    DASCHUND
+    AIREDALE
+    LABRADOR
+    BORZOI
+    BOXER
+
+Output to an SVG file is also possible:
+
+    >>> wordsearch.write_wordsearch_and_solution_svg()
+
+which produces the image:
+
+![](./doc/source/_static/dog-search.svg)
