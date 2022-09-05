@@ -7,7 +7,7 @@ root = Path(__file__).parent.resolve()
 long_description = (root / "README.rst").read_text(encoding="utf-8")
 
 setup(
-    name="pywordsearch",
+    name="python-wordsearch",
     version="1.0.0",
     description="A package for creating word searches",
     long_description=long_description,

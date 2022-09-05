@@ -8,7 +8,7 @@ WordSearch is a Python class for creating wordsearch puzzles.
 Installation:
 =============
 
-The PyValem package can be installed either from PyPI_ using pip
+The PyValem package can be installed either from PyPI using pip
 
 .. code-block:: bash
 
@@ -99,6 +99,3 @@ which produces the image:
 .. image:: https://raw.githubusercontent.com/scipython/python-wordsearch/master/doc/source/_static/dog-search.svg
   :width: 600
   :alt: Example wordsearch of dog breeds
-
-
-.. _PyPI: https://pypi.org/project/pyvalem/
