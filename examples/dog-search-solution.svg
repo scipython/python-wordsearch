@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <svg xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1414" >
+        <defs>
+        <style type="text/css"><![CDATA[
+        line, path {
+          stroke: black;
+          stroke-width: 4;
+          stroke-linecap: square;
+        }
+        path {
+          fill: none;
+        }
+        
+        text {
+          font: bold 24px Verdana, Helvetica, Arial, sans-serif;
+        }
+      
+        ]]>
+        </style>
+        </defs>
+        <text x="564.0" y="36.0" text-anchor="middle">P</text>
+<text x="532.0" y="68.0" text-anchor="middle">O</text>
+<text x="500.0" y="100.0" text-anchor="middle">M</text>
+<text x="372.0" y="132.0" text-anchor="middle">A</text>
+<text x="404.0" y="132.0" text-anchor="middle">I</text>
+<text x="436.0" y="132.0" text-anchor="middle">R</text>
+<text x="468.0" y="132.0" text-anchor="middle">E</text>
+<text x="500.0" y="132.0" text-anchor="middle">D</text>
+<text x="532.0" y="132.0" text-anchor="middle">A</text>
+<text x="564.0" y="132.0" text-anchor="middle">L</text>
+<text x="596.0" y="132.0" text-anchor="middle">E</text>
+<text x="436.0" y="164.0" text-anchor="middle">R</text>
+<text x="468.0" y="164.0" text-anchor="middle">O</text>
+<text x="500.0" y="164.0" text-anchor="middle">D</text>
+<text x="532.0" y="164.0" text-anchor="middle">A</text>
+<text x="564.0" y="164.0" text-anchor="middle">R</text>
+<text x="596.0" y="164.0" text-anchor="middle">B</text>
+<text x="628.0" y="164.0" text-anchor="middle">A</text>
+<text x="660.0" y="164.0" text-anchor="middle">L</text>
+<text x="372.0" y="196.0" text-anchor="middle">G</text>
+<text x="404.0" y="196.0" text-anchor="middle">A</text>
+<text x="436.0" y="196.0" text-anchor="middle">A</text>
+<text x="468.0" y="196.0" text-anchor="middle">U</text>
+<text x="500.0" y="196.0" text-anchor="middle">H</text>
+<text x="532.0" y="196.0" text-anchor="middle">A</text>
+<text x="564.0" y="196.0" text-anchor="middle">U</text>
+<text x="596.0" y="196.0" text-anchor="middle">H</text>
+<text x="628.0" y="196.0" text-anchor="middle">I</text>
+<text x="660.0" y="196.0" text-anchor="middle">H</text>
+<text x="692.0" y="196.0" text-anchor="middle">C</text>
+<text x="372.0" y="228.0" text-anchor="middle">N</text>
+<text x="404.0" y="228.0" text-anchor="middle">R</text>
+<text x="500.0" y="228.0" text-anchor="middle">B</text>
+<text x="596.0" y="228.0" text-anchor="middle">D</text>
+<text x="340.0" y="260.0" text-anchor="middle">I</text>
+<text x="436.0" y="260.0" text-anchor="middle">E</text>
+<text x="468.0" y="260.0" text-anchor="middle">O</text>
+<text x="596.0" y="260.0" text-anchor="middle">A</text>
+<text x="308.0" y="292.0" text-anchor="middle">A</text>
+<text x="436.0" y="292.0" text-anchor="middle">R</text>
+<text x="468.0" y="292.0" text-anchor="middle">Y</text>
+<text x="596.0" y="292.0" text-anchor="middle">S</text>
+<text x="276.0" y="324.0" text-anchor="middle">N</text>
+<text x="404.0" y="324.0" text-anchor="middle">Z</text>
+<text x="500.0" y="324.0" text-anchor="middle">H</text>
+<text x="596.0" y="324.0" text-anchor="middle">C</text>
+<text x="372.0" y="356.0" text-anchor="middle">O</text>
+<text x="436.0" y="356.0" text-anchor="middle">R</text>
+<text x="468.0" y="356.0" text-anchor="middle">E</text>
+<text x="500.0" y="356.0" text-anchor="middle">X</text>
+<text x="532.0" y="356.0" text-anchor="middle">O</text>
+<text x="564.0" y="356.0" text-anchor="middle">B</text>
+<text x="596.0" y="356.0" text-anchor="middle">H</text>
+<text x="340.0" y="388.0" text-anchor="middle">I</text>
+<text x="564.0" y="388.0" text-anchor="middle">U</text>
+<text x="596.0" y="388.0" text-anchor="middle">U</text>
+<text x="596.0" y="420.0" text-anchor="middle">N</text>
+<text x="596.0" y="452.0" text-anchor="middle">D</text>
+<text x="628.0" y="452.0" text-anchor="middle">D</text><text x="250.0" y="541.0" text-anchor="middle" class="wordlist">POMERANIAN</text>
+<text x="250.0" y="566.0" text-anchor="middle" class="wordlist">CHIHUAHUA</text>
+<text x="250.0" y="591.0" text-anchor="middle" class="wordlist">GREYHOUND</text>
+<text x="250.0" y="616.0" text-anchor="middle" class="wordlist">DASCHUND</text>
+<text x="750.0" y="541.0" text-anchor="middle" class="wordlist">AIREDALE</text>
+<text x="750.0" y="566.0" text-anchor="middle" class="wordlist">LABRADOR</text>
+<text x="750.0" y="591.0" text-anchor="middle" class="wordlist">BORZOI</text>
+<text x="750.0" y="616.0" text-anchor="middle" class="wordlist">BOXER</text></svg>
