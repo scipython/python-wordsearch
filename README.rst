@@ -32,6 +32,14 @@ Examples:
 Creating a Word Search Puzzle
 -----------------------------
 
+A ``WordSearch`` object can be created with the following arguments to generate a word-search:
+
+* ``nrows``, ``ncols``: the dimensions of the word-search grid
+* ``wordlist`` or ``wordlist_filename``: a list of words or the filename of a text file containing the words (one per line).
+* ``output_filestem``: forms the base of the filename to use for the output SVG image. Defaults to ``'wordsearch'``, which will produced files called ``'wordsearch-search.svg'`` and ``'wordsearch-search-solution.svg'``.
+* ``mask`` (optional): defines the shape of the word-search (``None``, ``'circle'`` or ``'squares'``).
+* ``allow_backwards_words``: defaults to ``False``.
+
 .. code-block:: pycon
 
     >>> from wordsearch import WordSearch
