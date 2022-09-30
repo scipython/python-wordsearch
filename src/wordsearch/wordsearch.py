@@ -238,12 +238,23 @@ class WordSearch:
         # We return the last y-coord used, to decide where to put the word list.
         return y, "\n".join(s)
 
-    def wordlist_svg(self, width, height, y0):
+    def wordlist_svg(self, width, height, y0, ncols=2):
         """Return a list of the words to find as a sequence of <text> elements."""
 
-        # Use two columns of words to save (some) space.
         n = len(self.wordlist)
-        col1, col2 = self.wordlist[: n // 2], self.wordlist[n // 2 :]
+        # Use ncols columns of words to save (some) space.
+        nwords_per_col, r = divmod(n, ncols)
+        # If there is a remainder, distribute the words over the existing columns.
+        if r:
+            nwords_per_col += 1
+
+        sorted_wordlist = sorted(self.wordlist)
+        columns = [
+            sorted_wordlist[i : i + nwords_per_col] for i in range(0, n, nwords_per_col)
+        ]
+        # Under some circumstances (few words or many columns) there may not
+        # be the requested number of columns, so reset ncols here.
+        ncols = len(columns)
 
         def word_at(x, y, word):
             """The SVG element for word centred at (x, y)."""
@@ -252,26 +263,31 @@ class WordSearch:
                 "{}</text>".format(x, y, word)
             )
 
-        s = []
-        x = width * 0.25
         # Build the list of <text> elements for each column of words.
-        y0 += 25
-        for i, word in enumerate(col1):
-            s.append(word_at(x, y0 + 25 * i, word))
-        x = width * 0.75
-        for i, word in enumerate(col2):
-            s.append(word_at(x, y0 + 25 * i, word))
+        s = []
+        padfrac = 0.1
+        Dx = width * (1 - 2 * padfrac) // ncols
+        for j in range(ncols):
+            x = width * padfrac + Dx / 2 + j * Dx
+            y = y0
+            for i, word in enumerate(columns[j]):
+                s.append(word_at(x, y + 25 * i, word))
+
         return "\n".join(s)
 
-    def make_wordsearch_svg(self, grid, width=1000, height=1414):
-        """Return the wordsearch grid as SVG."""
+    def make_wordsearch_svg(self, grid, width=1000, height=1414, ncols=2):
+        """Return the wordsearch grid as SVG.
+
+        ncols is the number of columns in which to output the wordlist.
+
+        """
 
         svg = self._svg_preamble(width, height)
         y0, svg_grid = self.grid_as_svg(grid, width, height)
         svg += svg_grid
         # If there's room print the word list.
-        if y0 + 25 * len(self.wordlist) // 2 < height:
-            svg += self.wordlist_svg(width, height, y0)
+        if y0 + 25 * len(self.wordlist) // ncols < height:
+            svg += self.wordlist_svg(width, height, y0, ncols)
         svg += "</svg>"
         return svg
 
