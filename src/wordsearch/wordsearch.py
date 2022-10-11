@@ -49,7 +49,7 @@ class WordSearch:
 
         # Obviously, no word can be longer than the maximum dimension.
         max_word_len = max(nrows, ncols)
-        if max(len(word) for word in wordlist) > max_word_len:
+        if max(len(word.replace(" ", "")) for word in wordlist) > max_word_len:
             raise ValueError(
                 "Word list contains a word with too many letters."
                 " The maximum is {}".format(max_word_len)
